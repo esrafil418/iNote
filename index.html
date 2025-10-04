@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>iNote App</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>[... iNote ...]</h1>
+
+      <!-- Form to add a new note -->
+      <form class="form" id="form">
+        <label for="note-input">Take a note</label>
+        <br />
+        <textarea
+          id="note-input"
+          rows="10"
+          cols="45"
+          placeholder="Write your note here..."
+        ></textarea>
+        <input type="submit" id="submit-btn" value="Add Note" />
+      </form>
+
+      <!-- Container to display user notes -->
+      <div id="user-notes"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  background: rgb(235, 222, 199);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Main container */
+.container {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  border: 2px solid gray;
+  padding: 50px;
+  background: rgb(245, 221, 177);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+h1 {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Form label */
+label {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Textarea styling */
+textarea {
+  background: gainsboro;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  width: 100%;
+  resize: vertical;
+  font-size: 16px;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+  display: block;
+  margin: 20px auto 10px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  background: rgb(245, 206, 108);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+  background: rgb(230, 180, 80);
+}
+
+/* Each note item */
+.note-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff3c4;
+  padding: 10px 15px;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Note text */
+.note-item p {
+  margin: 0;
+  word-break: break-word;
+}
+
+/* Remove button */
+.remove-btn {
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+
+.remove-btn:hover {
+  transform: scale(1.2);
+}
