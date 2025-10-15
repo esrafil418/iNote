@@ -3,7 +3,7 @@
 A simple note-taking web app built with **HTML, CSS, and JavaScript**.  
 Notes are saved in **localStorage**, so they persist even after refreshing the page.
 
-[🚀 Live:](https://esrafil418.github.io/iNote/)
+[🚀 Live](https://esrafil418.github.io/iNote/)
 
 ## Features
 
