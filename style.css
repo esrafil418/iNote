@@ -1,110 +1,123 @@
-/* Reset default styles */
+/*! Basic reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body styling */
 body {
-  background: rgb(235, 222, 199);
+  min-height: 100vh;
+  font-family: sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Arial, sans-serif;
-  min-height: 100vh;
+  background: rgb(235, 222, 199);
+  color: #333;
 }
 
-/* Main container */
+/*! app container */
 .container {
-  margin-top: 70px;
+  width: min(720px, 95%);
+  background: rgb(245, 221, 177);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
   border: 2px solid gray;
-  padding: 50px;
-  background: rgb(245, 221, 177);
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Title */
-h1 {
-  cursor: pointer;
-  font-size: 2rem;
-  color: #333;
-}
-
-/* Form label */
-label {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-/* Textarea styling */
-textarea {
-  background: gainsboro;
-  margin-top: 15px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #999;
-  width: 100%;
-  resize: vertical;
-  font-size: 16px;
-}
-
-/* Submit button styling */
-input[type="submit"] {
+/*! form styles */
+.form label {
+  font-weight: 600;
   display: block;
-  margin: 20px auto 10px;
-  padding: 10px 20px;
-  font-size: 15px;
-  font-weight: bold;
-  background: rgb(245, 206, 108);
-  border-radius: 5px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+#note-input {
+  background: gainsboro;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-size: 1rem;
+}
+
+#submit-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
   border: none;
+  background: rgb(207, 174, 91);
+  color: #fcfcfc;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 0.8rem;
   transition: background 0.3s;
 }
 
-input[type="submit"]:hover {
-  background: rgb(230, 180, 80);
+#submit-btn:hover {
+  background: rgb(180, 150, 80);
 }
 
-/* Each note item */
+/*! Notes list */
+#user-notes {
+  width: 100%;
+  max-width: 100%;
+  height: 260px;
+  margin-top: 18px;
+  background: rgba(180, 150, 80, 0.4);
+  border: 1px solid rgba(102, 126, 234, 0.12);
+  border-radius: 10px;
+  padding: 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
 .note-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f7f9ff;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  word-break: break-word;
   background: #fff3c4;
-  padding: 10px 15px;
-  margin-top: 10px;
-  width: 100%;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Note text */
 .note-item p {
   margin: 0;
-  word-break: break-word;
+  flex: 1 1 auto;
+  color: #222;
+  font-size: 0.95rem;
 }
 
-/* Remove button */
 .remove-btn {
-  color: red;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
   background: transparent;
-  font-size: 1.1rem;
-  transition: transform 0.2s;
+  border: none;
+  color: #9b1c1c;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
 }
 
 .remove-btn:hover {
-  transform: scale(1.2);
+  background: rgba(155, 28, 28, 0.06);
+}
+
+/*! small screens tweak */
+@media (max-width: 420px) {
+  #user-notes {
+    height: 200px;
+  }
 }
